@@ -1,60 +1,85 @@
-# 🇧🇷 Auditoria do Mercado de Carbono (Verra): A Estratégia de Valor do Brasil
+=======
+# Verra VCS Market Analysis  
+### An Empirical Analysis of the Voluntary Carbon Market Using Issuance and Pipeline Data
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-Analytics-150458?style=for-the-badge&logo=pandas)
-![Status](https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge)
-
-> **Resumo Executivo:** Enquanto os mercados asiáticos dominam o *volume* de créditos de carbono (commodities), o Brasil lidera em *valor financeiro* devido aos altos prêmios de projetos baseados na natureza (NBS).
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
 ---
 
-## 📊 O Insight Principal
-Esta análise audita os dados do registro Verra (VCS) entre 2015-2025 para revelar uma dinâmica clara que **Volume não é igual a Valor.**
+## Overview
 
-![Gráfico de Market Share](output/05_market_share_valor.png)
+This repository presents a **data-driven empirical analysis of the Voluntary Carbon Market (VCM)** using **real registry data from Verra’s Verified Carbon Standard (VCS)**.  
+The study integrates **historical credit issuance data** with **pipeline project information** to examine market structure, issuance dynamics, and aggregated price behavior in a heterogeneous and institutionally evolving market.
 
-### Principais Descobertas
-* **A Ilusão do Volume:** Competidores globais (Índia/China) focam em créditos de energia renovável, negociados a margens baixas (~$1.50/tCO2e).
-* **O Diferencial Brasileiro:** O Brasil captura uma fatia desproporcional do valor financeiro global devido a projetos de Manejo Florestal (AFOLU) com preços premium (~$10.00/tCO2e).
-* **Liderança de Mercado:** Empresas como Biofílica Ambipar e Carbonext consolidam-se como líderes em geração de receita no cenário doméstico.
+The analysis is descriptive and exploratory in nature, prioritizing **methodological transparency**, **reproducibility**, and **explicit recognition of market limitations**, rather than normative valuation or forecasting.
 
 ---
 
-## 📈 Análise Estendida (Galeria de Insights)
+## Key empirical insights
 
-Abaixo, os 6 eixos principais da auditoria detalhando a transição de volume para valor:
+### 1. Volume does not imply value
 
-| 1. Top 5 Emissores Globais | 2. Mix de Projetos (Brasil) |
-| :---: | :---: |
-| ![Top Emissores](output/01_top_emissores.png) | ![Brasil Mix](output/02_brasil_mix_projetos.png) |
-| *Cenário dominado por volume asiático.* | *Predomínio de Nature-Based Solutions.* |
+![Volume vs Value Comparison](output/07_comparativo_volume_valor.png)
 
-| 3. Evolução Temporal (Volume) | 4. Contraste: Volume vs Valor |
-| :---: | :---: |
-| ![Linha do Tempo](output/03_tendencia_temporal.png) | ![Dual Axis](output/04_comparativo_volume_valor.png) |
-| *Crescimento histórico das emissões.* | *Brasil x média global.* |
-
-| 5. Market Share Financeiro | 6. Líderes do Mercado (Developers) |
-| :---: | :---: |
-| ![Market Share](output/05_market_share_valor.png) | ![Top Developers](output/06_top_developers_br.png) |
-| *Faturamento do Brasil.* | *Ranking das principais desenvolvedoras.* |
+High issuance volumes do not necessarily translate into higher economic value.  
+This figure illustrates how **Nature-Based Solutions (AFOLU)** concentrate a disproportionate share of market value relative to their physical volume, reflecting the non-fungibility of credits and differentiated buyer preferences within the VCM.
 
 ---
 
-## 🛠️ Estratégia Técnica
-O projeto foi estruturado como um pipeline de dados:
+### 2. Prices are structurally volatile and context-dependent
 
-1.  **Ingestão:** Tratamento de grandes volumes de dados CSV com codificação `latin1`.
-2.  **Limpeza:** Normalização de texto via `Unicodedata` para correção de caracteres especiais.
-3.  **Modelagem:** Criação de um `Pricing Engine` customizado para simular valuations de mercado.
-4.  **Visualização:** Gráficos utilizando `Seaborn` e `Matplotlib` com eixos duplos e formatação percentual.
+![Comparative Price Trends](output/03_tendencia_comparativa.png)
 
-## 📂 Estrutura do Projeto
-```bash
-├── data/                  # Dados brutos (protegidos por .gitignore)
-├── output/                # Gráficos exportados em alta resolução
-├── vcs_analysis.ipynb     # Notebook principal com a lógica da auditoria
-├── vcs_analysis.html      # Relatório para visualização rápida
-└── README.md              # Documentação do projeto
+Aggregated price indicators exhibit significant temporal variation, including periods of heightened volatility.  
+These dynamics reflect not only supply and demand conditions, but also **reputational shocks**, **changes in corporate climate strategies**, and **expectations regarding future regulatory alignment**, reinforcing the limits of interpreting prices as signals of fundamental value.
 
+---
 
+### 3. Market structure is evolving over time
+
+![Market Share Dynamics](output/05_04_market_share_dynamics.png)
+
+Market share dynamics indicate that the **composition of the Voluntary Carbon Market is not static**, with shifts across regions and project categories over time.  
+This highlights the relevance of combining historical issuance data with pipeline information to contextualize future supply patterns.
+
+---
+
+## Data Sources
+
+All analyses are based on **publicly available registry data from Verra**:
+
+- **VCS Issuance** – verified credits already issued, including project attributes, volumes, vintages, and classifications  
+- **VCS Pipeline** – registered and pipeline projects, offering a forward-looking view of potential future supply  
+
+Raw data are processed locally and are not redistributed in this repository.
+
+---
+
+## Methodological Notes
+
+The notebook implements a **fully reproducible analytical workflow**, including:
+
+- Data ingestion and standardization  
+- Text normalization and consistency checks  
+- Feature construction and categorical classification  
+- Aggregated statistical analysis and visualization  
+
+Price-related metrics are treated as **descriptive indicators**, not as estimates of intrinsic value or social cost.
+
+---
+
+## How to explore this repository
+
+-  **Quick understanding:** read this README and inspect the figures  
+-  **Full analysis:** open `verra_vcs_voluntary_carbon_market_analysis.ipynb`  
+-  **Rendered version:** open the corresponding HTML file
+
+---
+
+## Disclaimer
+
+This project is intended solely for research and analytical purposes.  
+It does not constitute financial advice, market auditing, or validation of any carbon credit, project, or registry.
+>>>>>>> 83f627e (Replace legacy project structure with updated VCS market analysis)
