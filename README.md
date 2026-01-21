@@ -1,4 +1,3 @@
-=======
 # Verra VCS Market Analysis  
 ### An Empirical Analysis of the Voluntary Carbon Market Using Issuance and Pipeline Data
 
@@ -14,6 +13,38 @@ This repository presents a **data-driven empirical analysis of the Voluntary Car
 The study integrates **historical credit issuance data** with **pipeline project information** to examine market structure, issuance dynamics, and aggregated price behavior in a heterogeneous and institutionally evolving market.
 
 The analysis is descriptive and exploratory in nature, prioritizing **methodological transparency**, **reproducibility**, and **explicit recognition of market limitations**, rather than normative valuation or forecasting.
+
+---
+
+## How to explore this repository
+
+-  **Quick understanding:** read this README and inspect the figures  
+-  **Full analysis:** open `verra_vcs_voluntary_carbon_market_analysis.ipynb`  
+-  **Rendered version:** open the corresponding HTML file
+
+---
+
+## Data Sources
+
+All analyses are based on **publicly available registry data from Verra**:
+
+- **VCS Issuance** – verified credits already issued, including project attributes, volumes, vintages, and classifications  
+- **VCS Pipeline** – registered and pipeline projects, offering a forward-looking view of potential future supply  
+
+Raw data are processed locally and are not redistributed in this repository.
+
+---
+
+## Methodological Notes
+
+The notebook implements a **fully reproducible analytical workflow**, including:
+
+- Data ingestion and standardization  
+- Text normalization and consistency checks  
+- Feature construction and categorical classification  
+- Aggregated statistical analysis and visualization  
+
+Price-related metrics are treated as **descriptive indicators**, not as estimates of intrinsic value or social cost.
 
 ---
 
@@ -46,40 +77,7 @@ This highlights the relevance of combining historical issuance data with pipelin
 
 ---
 
-## Data Sources
-
-All analyses are based on **publicly available registry data from Verra**:
-
-- **VCS Issuance** – verified credits already issued, including project attributes, volumes, vintages, and classifications  
-- **VCS Pipeline** – registered and pipeline projects, offering a forward-looking view of potential future supply  
-
-Raw data are processed locally and are not redistributed in this repository.
-
----
-
-## Methodological Notes
-
-The notebook implements a **fully reproducible analytical workflow**, including:
-
-- Data ingestion and standardization  
-- Text normalization and consistency checks  
-- Feature construction and categorical classification  
-- Aggregated statistical analysis and visualization  
-
-Price-related metrics are treated as **descriptive indicators**, not as estimates of intrinsic value or social cost.
-
----
-
-## How to explore this repository
-
--  **Quick understanding:** read this README and inspect the figures  
--  **Full analysis:** open `verra_vcs_voluntary_carbon_market_analysis.ipynb`  
--  **Rendered version:** open the corresponding HTML file
-
----
-
 ## Disclaimer
 
 This project is intended solely for research and analytical purposes.  
 It does not constitute financial advice, market auditing, or validation of any carbon credit, project, or registry.
->>>>>>> 83f627e (Replace legacy project structure with updated VCS market analysis)
